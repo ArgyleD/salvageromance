@@ -9,6 +9,8 @@
 <meta property="og:description" content="Dating for people who have stopped believing in 'the one'. No swiping. No filtered photos from 2016. No bios about margaritas or partners in crime.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 54S8 40.5 8 24.5C8 15.9 15 9 23.4 9c4.2 0 8 1.9 10.6 4.9 1.1-1.3 2.5-2.4 4.1-3.2l4.2 6-6.6 3.6 8.8 3.9-9.7 4.2 6.9 5.1-13.1 2.6 3.1 6.8L32 54z' fill='%23b8935a'/%3E%3Cpath d='M32 54S8 40.5 8 24.5C8 15.9 15 9 23.4 9c4.2 0 8 1.9 10.6 4.9C36.6 10.9 40.4 9 44.6 9 53 9 60 15.9 60 24.5 60 40.5 32 54 32 54z' fill='none' stroke='%2316324a' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script data-goatcounter="https://salvageromance.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 <style>
 :root {
   --navy: #16324a;
@@ -415,25 +417,115 @@ details.faq-item p {
   font-size: 0.92rem;
 }
 
-/* Registration closed banner */
-.register-banner {
-  background: var(--gold-light);
-  border-radius: var(--radius);
-  padding: 40px 32px;
-  text-align: center;
+/* Safety notice — deliberately breaks from the site's joke styling */
+#register {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.safety-notice {
   max-width: 640px;
   margin: 0 auto;
+  background: #f4f4f4;
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  padding: 32px 36px;
+  color: #2b2b2b;
 }
 
-.register-banner h2 {
-  font-family: Georgia, serif;
-  color: var(--navy);
-  margin: 0 0 12px;
+.safety-notice .safety-icon {
+  font-size: 1.4rem;
+  margin-right: 8px;
 }
 
-.register-banner p {
-  color: var(--navy-light);
+.safety-notice h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+}
+
+.safety-notice p {
+  font-size: 0.94rem;
+  color: #3a3a3a;
+  margin: 0 0 16px;
+}
+
+.safety-notice ul {
   margin: 0 0 20px;
+  padding-left: 20px;
+  font-size: 0.94rem;
+  color: #3a3a3a;
+}
+
+.safety-notice li {
+  margin-bottom: 6px;
+}
+
+.safety-notice .resources {
+  font-size: 0.9rem;
+  margin: 0 0 24px;
+}
+
+.safety-notice .resources a {
+  color: #1a4d8f;
+  text-decoration: underline;
+}
+
+.safety-notice .btn-secondary {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+.safety-notice .btn-secondary:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.safety-details {
+  margin: 4px 0 20px;
+  border-top: 1px solid #d7d7d7;
+  padding-top: 16px;
+}
+
+.safety-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 0.94rem;
+  list-style: none;
+  position: relative;
+  padding-right: 24px;
+}
+
+.safety-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.safety-details summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #5a5a5a;
+}
+
+.safety-details[open] summary::after {
+  content: "\2212";
+}
+
+.safety-details summary:hover {
+  color: #000;
+}
+
+.safety-details .details-body {
+  padding-top: 16px;
+}
+
+.safety-details .details-body p:first-child {
+  margin-top: 0;
 }
 
 /* Footer */
@@ -599,10 +691,29 @@ footer.site-footer p {
 
 <section id="register">
   <div class="wrap">
-    <div class="register-banner">
-      <h2>Thanks for your interest.</h2>
-      <p>Registration is currently closed while our review board audits everyone's emotional baggage for hidden fees. Please check back never.</p>
-      <a href="#top" class="btn btn-primary">Back to Safety</a>
+    <div class="safety-notice">
+      <h2><span class="safety-icon" aria-hidden="true">⚠</span>A quick, unfunny word about safety</h2>
+      <p>SalvageRomance.com is satire. There is no real registration on this page — nothing you click here collects or stores anything.</p>
+      <details class="safety-details" id="safety-details">
+        <summary>Read the advice</summary>
+        <div class="details-body">
+          <p>The underlying point is genuine: <strong>a domain being mentioned in a YouTube video, podcast, or any piece of online content doesn't mean it's safe.</strong> Creators can misspeak a URL, links can be hijacked, sponsored segments aren't security-vetted, and scammers routinely register lookalike domains to ride the traffic of anything that goes viral. "I heard about it in a video" is not verification.</p>
+          <p>Before you enter personal information anywhere:</p>
+          <ul>
+            <li>Check the site independently rather than trusting a single link or mention</li>
+            <li>Look for a proper privacy policy and HTTPS — and don't stop there, both are trivial to fake</li>
+            <li>Be suspicious if a site asks for more than it needs</li>
+            <li>Use a password manager and enable MFA wherever you can</li>
+            <li>If in doubt, don't submit</li>
+          </ul>
+          <p class="resources">
+            For further reading: <a href="https://www.ncsc.gov.uk" target="_blank" rel="noopener">National Cyber Security Centre</a> ·
+            <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office</a> ·
+            <a href="https://cygnetsecurity.co.uk" target="_blank" rel="noopener">Cygnet Security</a> for security consulting
+          </p>
+        </div>
+      </details>
+      <a href="#top" class="btn btn-secondary">Back to the joke →</a>
     </div>
   </div>
 </section>
@@ -617,6 +728,16 @@ footer.site-footer p {
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("safety-details").addEventListener("toggle", function (e) {
+  if (e.target.open && window.goatcounter && window.goatcounter.count) {
+    window.goatcounter.count({
+      path: "safety-advice-opened",
+      title: "Safety advice opened",
+      event: true,
+    });
+  }
+});
 </script>
 </body>
 </html>
