@@ -499,10 +499,14 @@ details.faq-item p {
   cursor: pointer;
   font-weight: 700;
   color: #1a1a1a;
-  font-size: 0.94rem;
+  font-size: 0.95rem;
   list-style: none;
+  display: inline-block;
+  padding: 13px 40px 13px 24px;
+  border: 2px solid #1a1a1a;
+  border-radius: var(--radius);
   position: relative;
-  padding-right: 24px;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
 }
 
 .safety-details summary::-webkit-details-marker {
@@ -512,10 +516,11 @@ details.faq-item p {
 .safety-details summary::after {
   content: "+";
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.1rem;
-  color: #5a5a5a;
+  color: inherit;
 }
 
 .safety-details[open] summary::after {
@@ -523,7 +528,9 @@ details.faq-item p {
 }
 
 .safety-details summary:hover {
-  color: #000;
+  background: #1a1a1a;
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 .safety-details .details-body {
@@ -719,7 +726,6 @@ footer.site-footer p {
           </p>
         </div>
       </details>
-      <a href="#top" class="btn btn-secondary">Back to the joke →</a>
     </div>
   </div>
 </section>
