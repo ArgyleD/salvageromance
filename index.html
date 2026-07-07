@@ -479,6 +479,75 @@ details.faq-item p {
   text-decoration: underline;
 }
 
+.trust-score {
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin: 0 0 20px;
+}
+
+.trust-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.trust-score-label {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #1a1a1a;
+}
+
+.trust-pill-bad {
+  background: #c0392b;
+  color: #fff;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.trust-checklist {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 0.88rem;
+}
+
+.trust-checklist li {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.trust-checklist li.fail {
+  color: #a3392c;
+}
+
+.trust-checklist li.pass {
+  color: #4a7a5e;
+}
+
+.trust-checklist li span {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.trust-score-note {
+  font-size: 0.86rem;
+  color: #5c5c5c;
+  font-style: italic;
+  margin: 0;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
 .safety-notice .btn-secondary {
   border-color: #1a1a1a;
   color: #1a1a1a;
@@ -706,6 +775,22 @@ footer.site-footer p {
   <div class="wrap">
     <div class="safety-notice">
       <h2><span class="safety-icon" aria-hidden="true">⚠</span>A quick, unfunny word about safety</h2>
+
+      <div class="trust-score">
+        <div class="trust-score-header">
+          <span class="trust-score-label">SalvageRomance.com — Self-Audit</span>
+          <span class="trust-pill-bad">17% Trustworthy</span>
+        </div>
+        <ul class="trust-checklist">
+          <li class="fail"><span aria-hidden="true">✕</span> Domain registered this week</li>
+          <li class="fail"><span aria-hidden="true">✕</span> No published company details or ownership</li>
+          <li class="fail"><span aria-hidden="true">✕</span> "Reviews" are testimonials we wrote ourselves</li>
+          <li class="pass"><span aria-hidden="true">✓</span> Uses HTTPS (means nothing by itself)</li>
+          <li class="pass"><span aria-hidden="true">✓</span> Looks professionally designed (also means nothing by itself)</li>
+        </ul>
+        <p class="trust-score-note">We could have put any number at the top of this box. That's exactly the point — check the substance, not the shine.</p>
+      </div>
+
       <p>SalvageRomance.com is satire. There is no real registration on this page — nothing you click here collects or stores anything.</p>
       <details class="safety-details" id="safety-details">
         <summary>Read the advice</summary>
